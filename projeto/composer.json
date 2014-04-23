@@ -1,0 +1,16 @@
+{
+    "name": "Dojo - ShowMeDeCode",
+    "description": "",
+    "homepage": "http://dojo.dev",
+    "require-dev": {
+
+        "phpunit/phpunit": "4.0@stable",
+        "squizlabs/php_codesniffer": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    }
+}
+
