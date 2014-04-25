@@ -9,3 +9,45 @@ Seguro-de-Carros
 * 5º - Se for sexo do feminino 50% de desconto se: Idade for até 23 anos e CNH  sem pontuação;
 * 6º - Se for sexo do feminino 20% de desconto se: Idade for acima de 23 anos e Estado Civil Casada;
 * 7º - Se for sexo do feminino 10% de desconto se: Idade for acima de 30 anos e Estado Civil Solteira e CNH sem pontuação;
+
+
+
+Retrospectiva do Dojo - ShowMeTheCode 12/04/2014 - POA 
+---------------------
+
+### Pontos Positivos (Sem edição!)
+* ideia
+* interacao
+* revezamento
+* codigo legado legal :)
+* dar o chocolate
+* neguim pulando por causa da buzina
+* mentor
+* problema afude
+* trazer um problema da vida real para um dojo
+* todos tiveram um nivel critico de padronizacao
+* interacao legal entre os participantes
+
+### Pontos Negativos (Sem edição!)
+* mac :( 
+* mouse invertido
+* delete
+* faltou explicar mais os conceitos TDD
+* cliente dava pitaco tecnico
+* BUZINA CHATA PA CARAI
+
+### Agradecimentos aos participantes presenciais
+* Pedro
+* Loirinho de óculos
+* Mateus
+* Moacir
+* Luis
+* Leonardo
+* Daniel
+* Ari 
+* Leo
+* Ale
+* Hyan
+
+Em especial o Paulo que deu um super força pra galera no code =P
+E Claro ao grande e querido Er Galvão por oda organização \0/
