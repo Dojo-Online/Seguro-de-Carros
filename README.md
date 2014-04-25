@@ -1,9 +1,14 @@
-Seguro-de-Carros
+Dojo - ShowMeTheCode 12/04/2014 - POA 
 ================
+Evento organizado pela TempoReal contou a participação da platéia.
+O que é um Dojo ? https://github.com/ThamaraHessel/DojoOnline/wiki/O-que-%C3%A9-um-Dojo-%3F
 
 
+Desafio - Seguro-de-Carros
+---------------------
+Nós trabalhamos apenas com seguro de carros particular, nossos clientes tem o seguinte perfil/requisitos:
 * 1º - Nome, CPF, Data de Nascimento, Telefone, Celular, Email, Estado Civil, Nº de Contrato
-* 2º - Faixa etaria entre 18 a 60 anos<
+* 2º - Faixa etaria entre 18 a 60 anos
 * 3º - Nome não pode ter mais de 15 caracteres, sem números ou especiais;
 * 4º - CPF 11 caracteres, somente números números, sem especiais;
 * 5º - Se for sexo do feminino 50% de desconto se: Idade for até 23 anos e CNH  sem pontuação;
@@ -12,7 +17,7 @@ Seguro-de-Carros
 
 
 
-Retrospectiva do Dojo - ShowMeTheCode 12/04/2014 - POA 
+Retrospectiva
 ---------------------
 
 ### Pontos Positivos (Sem edição!)
@@ -50,4 +55,5 @@ Retrospectiva do Dojo - ShowMeTheCode 12/04/2014 - POA
 * Hyan
 
 Em especial o Paulo que deu um super força pra galera no code =P
-E Claro ao grande e querido Er Galvão por oda organização \0/
+
+E ao grande e querido Er Galvão por toda organização \0/
