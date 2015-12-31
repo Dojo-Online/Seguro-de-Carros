@@ -1,11 +1,15 @@
-== Docker ==
+Docker
+==
 
 Usado para o desenvolvimento em um abiente virtual e contolado, Docker é um gerenciador de conteiners amplamente usado atualmente.
 
-=== Referênca ===
+Referênca
+----
+
 https://www.docker.com/
 
-=== Trabalhando com Docker ===
+Trabalhando com Docker
+----
 
 Para criar a imagem é preciso rodar o comando a partir da raiz:
 
