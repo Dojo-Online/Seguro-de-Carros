@@ -89,6 +89,11 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $client = new Client('Bilu Bilu Teteia', '03487624819', (new \DateTime())->sub(new \DateInterval("P20Y")));
     }
 
+    public function testDocumentWith11NumbersShouldBeValid()
+    {
+        $client = new Client('Bilu da Teteia', 12356789012, (new \DateTime())->sub(new \DateInterval("P20Y")));
+    }
+
     /**
      * @expectedException        CarInsurance\Exception\InvalidClientException
      * @expectedExceptionMessage Client document should be a numeric with 11 characters
