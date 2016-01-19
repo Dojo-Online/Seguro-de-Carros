@@ -48,7 +48,7 @@ class Client
     {
         $now = new \DateTime();
         $interval = $now->diff($birthdate);
-        if ($interval->y < 18) {
+        if ($interval->y < 18 || $interval->y > 60) {
             throw new InvalidClientException("Client age should be between 18 and 60");
         }
         return $this;

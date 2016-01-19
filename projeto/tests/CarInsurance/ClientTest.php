@@ -46,4 +46,15 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $birthdate->sub(new \DateInterval("P17Y")); // 17 years ago
         $client = new Client('Bilu', '03487624819', $birthdate);
     }
+
+    /**
+     * @expectedException        CarInsurance\Exception\InvalidClientException
+     * @expectedExceptionMessage Client age should be between 18 and 60
+     */
+    public function testAgeGreaterThan60ShouldBeInvalid()
+    {
+        $birthdate = new \DateTime(); // now
+        $birthdate->sub(new \DateInterval("P61Y")); // 61 years ago
+        $client = new Client('Bilu', '03487624819', $birthdate);
+    }
 }
