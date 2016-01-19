@@ -118,6 +118,6 @@ class ClientTest extends \PHPUnit_Framework_TestCase
      */
     public function testDocumentWithMoreThan11NumbersShouldBeInvalid()
     {
-        $client = new Client('Bilu da Teteia', 12356, (new \DateTime())->sub(new \DateInterval("P20Y")));
+        $client = new Client('Bilu da Teteia', 123567891012, (new \DateTime())->sub(new \DateInterval("P20Y")));
     }
 }
