@@ -99,6 +99,6 @@ class Client
 
     private function isValidDocument($document)
     {
-        return (bool)is_numeric($document);
+        return is_numeric($document) && (strlen($document) == 11);
     }
 }
