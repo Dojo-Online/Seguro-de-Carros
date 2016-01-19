@@ -15,7 +15,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $client
             ->setName('Bruno')
             ->setDocument('03487624819')
-            ->setBirthdate(new \DateTime('1995-01-25'))
+            ->setBirthdate((new \DateTime())->sub(new \DateInterval("P20Y"))) // 20 years old
             ->setHomeNumber('34349285')
             ->setPhoneNumber('94349285')
             ->setEmail('brunomrpx@gmail.com')
@@ -37,7 +37,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException        InvalidClientException
+     * @expectedException        CarInsurance\Exception\InvalidClientException
      * @expectedExceptionMessage Client age should be between 18 and 60
      */
     public function testAgeLessThan18ShouldBeInvalid()
