@@ -3,7 +3,7 @@
 use SeguradoraCarro\Cliente;
 use SeguradoraCarro\RegrasDeNegocio;
 
-class ClientTest extends PHPUnit_Framework_TestCase {
+class ClienteTest extends PHPUnit_Framework_TestCase {
     
     function testGetIdade() {
         $cliente = new Cliente();
