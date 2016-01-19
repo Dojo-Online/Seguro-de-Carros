@@ -36,9 +36,11 @@ class Client
 
     public function setName($name)
     {
+        $name = trim($name);
         if (!$this->isValidName($name)) {
             throw new InvalidClientException("Client name length should be less than 15 without numbers or special chars");
         }
+        $this->name = $name;
         return $this;
     }
 
@@ -89,6 +91,6 @@ class Client
 
     private function isValidName($name)
     {
-        return (bool)preg_match("/^[a-z]{1,14}$/i", $name);
+        return (bool)preg_match("/^[a-z]{2}[a-z ]{0,13}$/i", $name);
     }
 }
