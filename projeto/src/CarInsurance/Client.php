@@ -46,6 +46,9 @@ class Client
 
     public function setDocument($document)
     {
+        if (!$this->isValidDocument($document)) {
+            throw new InvalidClientException("Client document should be a numeric with 11 characters");
+        }
         return $this;
     }
 
@@ -92,5 +95,10 @@ class Client
     private function isValidName($name)
     {
         return (bool)preg_match("/^[a-z]{2}[a-z ]{0,13}$/i", $name);
+    }
+
+    private function isValidDocument($document)
+    {
+        return (bool)is_numeric($document);
     }
 }
