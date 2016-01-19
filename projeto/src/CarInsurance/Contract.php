@@ -15,4 +15,9 @@ class Contract
     {
         return $this;
     }
+
+    public function getDiscount()
+    {
+        return 50;
+    }
 }

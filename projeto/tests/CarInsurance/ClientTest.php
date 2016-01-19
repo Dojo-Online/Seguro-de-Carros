@@ -23,6 +23,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
             ->setHomeNumber('34349285')
             ->setPhoneNumber('94349285')
             ->setEmail('brunomrpx@gmail.com')
+            ->setGender(Client::MALE)
             ->setMaritalStatus('Single')
             ->setContract(new Contract(123123123));
 

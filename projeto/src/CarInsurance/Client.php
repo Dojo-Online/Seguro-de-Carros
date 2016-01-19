@@ -13,6 +13,10 @@ class Client
     private $homeNumber;
     private $email;
     private $maritalStatus;
+    private $gender;
+
+    const MALE = 'M';
+    const FEMALE = 'F';
 
     public function __construct()
     {
@@ -31,6 +35,12 @@ class Client
             ->setDocument($document)
             ->setBirthdate($birthdate);
 
+        return $this;
+    }
+
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
         return $this;
     }
 
