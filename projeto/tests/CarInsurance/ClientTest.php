@@ -7,7 +7,6 @@ use CarInsurance\Contract;
 
 class ClientTest extends \PHPUnit_Framework_TestCase
 {
-
     // Requisito 1
     public function testClientShouldHaveAttributes()
     {
@@ -56,5 +55,14 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $birthdate = new \DateTime(); // now
         $birthdate->sub(new \DateInterval("P61Y")); // 61 years ago
         $client = new Client('Bilu', '03487624819', $birthdate);
+    }
+
+    /**
+     * @expectedException        CarInsurance\Exception\InvalidClientException
+     * @expectedExceptionMessage Client name length should be less than 15 without numbers or special chars
+     */
+    public function testNameWithNumbersShouldBeInvalid()
+    {
+        $client = new Client('Bilu123', '03487624819', (new \DateTime())->sub(new \DateInterval("P20Y")));
     }
 }

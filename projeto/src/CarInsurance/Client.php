@@ -24,7 +24,7 @@ class Client
     /**
      * Overloaded constructor
      */
-    private function __constructNameDocumentBirthdate($name, $document, \Datetime $birthdate)
+    private function __constructNameDocumentBirthdate($name, $document, \DateTime $birthdate)
     {
         $this
             ->setName($name)
@@ -36,6 +36,9 @@ class Client
 
     public function setName($name)
     {
+        if (!$this->isValidName($name)) {
+            throw new InvalidClientException("Client name length should be less than 15 without numbers or special chars");
+        }
         return $this;
     }
 
@@ -44,11 +47,9 @@ class Client
         return $this;
     }
 
-    public function setBirthdate(\Datetime $birthdate)
+    public function setBirthdate(\DateTime $birthdate)
     {
-        $now = new \DateTime();
-        $interval = $now->diff($birthdate);
-        if ($interval->y < 18 || $interval->y > 60) {
+        if (!$this->isValidAge($birthdate)) {
             throw new InvalidClientException("Client age should be between 18 and 60");
         }
         return $this;
@@ -77,5 +78,17 @@ class Client
     public function setContract(Contract $contract)
     {
         return $this;
+    }
+
+    private function isValidAge(\DateTime $birthdate)
+    {
+        $now = new \DateTime();
+        $interval = $now->diff($birthdate);
+        return $interval->y >= 18 && $interval->y <= 60;
+    }
+
+    private function isValidName($name)
+    {
+        return (bool)preg_match("/^[a-z]{1,14}$/i", $name);
     }
 }
