@@ -14,26 +14,21 @@ class Client
     private $email;
     private $maritalStatus;
     private $gender;
+    private $cnhPoints = 0;
 
     const MALE = 'M';
     const FEMALE = 'F';
 
-    public function __construct()
-    {
-        if (func_num_args() === 3) {
-            $this->__constructNameDocumentBirthdate(func_get_arg(0), func_get_arg(1), func_get_arg(2));
-        }
-    }
+    const SINGLE = 'S';
+    const MARRIED = 'M';
 
-    /**
-     * Overloaded constructor
-     */
-    private function __constructNameDocumentBirthdate($name, $document, \DateTime $birthdate)
+    public function __construct($name, $document, \DateTime $birthdate, $gender)
     {
         $this
             ->setName($name)
             ->setDocument($document)
-            ->setBirthdate($birthdate);
+            ->setBirthdate($birthdate)
+            ->setGender($gender);
 
         return $this;
     }
@@ -42,6 +37,11 @@ class Client
     {
         $this->gender = $gender;
         return $this;
+    }
+
+    public function getGender()
+    {
+        return $this->gender;
     }
 
     public function setName($name)
@@ -59,6 +59,7 @@ class Client
         if (!$this->isValidDocument($document)) {
             throw new InvalidClientException("Client document should be a numeric with 11 characters");
         }
+        $this->document = $document;
         return $this;
     }
 
@@ -67,7 +68,13 @@ class Client
         if (!$this->isValidAge($birthdate)) {
             throw new InvalidClientException("Client age should be between 18 and 60");
         }
+        $this->birthdate = $birthdate;
         return $this;
+    }
+
+    public function getAge()
+    {
+        return $this->birthdate->diff(new \DateTime)->format('%Y');
     }
 
     public function setHomeNumber($homeNumber)
@@ -87,12 +94,24 @@ class Client
 
     public function setMaritalStatus($maritalStatus)
     {
+        $this->maritalStatus = $maritalStatus;
         return $this;
     }
 
-    public function setContract(Contract $contract)
+    public function getMaritalStatus()
     {
+        return $this->maritalStatus;
+    }
+
+    public function setCNHPoints($cnhPoints)
+    {
+        $this->cnhPoints = $cnhPoints;
         return $this;
+    }
+
+    public function getCNHPoints()
+    {
+        return $this->cnhPoints;
     }
 
     private function isValidAge(\DateTime $birthdate)
