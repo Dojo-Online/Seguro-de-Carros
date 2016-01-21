@@ -29,8 +29,6 @@ class Client
             ->setDocument($document)
             ->setBirthdate($birthdate)
             ->setGender($gender);
-
-        return $this;
     }
 
     public function setGender($gender)
