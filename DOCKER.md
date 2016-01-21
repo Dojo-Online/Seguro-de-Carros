@@ -17,7 +17,7 @@ Para criar a imagem é preciso rodar o comando a partir da raiz:
 
 Ocorrendo sucesso, com uma saída parecida com `Successfully built 66683d59bc88`, podemos rodar os testes com o seguinte comando:
 
-    sudo docker run -it --rm dojo-online/carinsurance phpunit
+    sudo docker run -it --rm -v ${PWD}:/carinsurance dojo-online/carinsurance phpunit
 
 Ou ainda entrar no shell da imagem com o comando
 
